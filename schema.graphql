@@ -1,0 +1,11 @@
+type Sticker @entity {
+  id: ID!
+  token: BigInt!
+  owner: Bytes!
+  hash: String!
+  tags: String!
+  votes: BigInt!
+  created_at: BigInt!
+  upvoted_at: BigInt!
+  transfered_at: BigInt!
+}
