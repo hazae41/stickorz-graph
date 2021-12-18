@@ -8,6 +8,7 @@ dataSources:
     source:
       address: "0xF5aa06E11e151E291D88c2184ebE8d8157453060"
       abi: Bank
+      startBlock: 22435633
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
