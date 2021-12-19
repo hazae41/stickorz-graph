@@ -22,6 +22,8 @@ export function handleMint(event: Mint): void {
   sticker.created_at = event.block.number
   sticker.upvoted_at = event.block.number
   sticker.transfered_at = event.block.number
+  if (!sticker.hash.startsWith("Qm"))
+    return
   sticker.save()
 }
 
