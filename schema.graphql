@@ -1,3 +1,11 @@
+type _Schema_
+  @fulltext(
+    name: "search"
+    language: fr
+    algorithm: rank
+    include: [{ entity: "Sticker", fields: [{ name: "hash" }, { name: "tags" }] }]
+  )
+
 type Sticker @entity {
   id: ID!
   token: BigInt!
