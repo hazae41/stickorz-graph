@@ -4,15 +4,7 @@ import {
   Transfer,
   Upvote
 } from "../generated/Bank/Bank"
-import { Count, Sticker } from "../generated/schema"
-
-function getCount(): Count {
-  const count = Count.load("1")
-  if (count) return count
-  const ncount = new Count("1")
-  ncount.count = 0
-  return ncount
-}
+import { Sticker } from "../generated/schema"
 
 export function handleApproval(event: Approval): void { }
 
@@ -34,9 +26,6 @@ export function handleMint(event: Mint): void {
     return
   if (!sticker.tags)
     return
-  const count = getCount()
-  count.count = count.count + 1
-  count.save()
   sticker.save()
 }
 
