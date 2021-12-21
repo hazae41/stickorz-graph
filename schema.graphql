@@ -1,3 +1,8 @@
+type Count @entity {
+  id: ID!
+  count: Int!
+}
+
 type Sticker @entity {
   id: ID!
   token: BigInt!
