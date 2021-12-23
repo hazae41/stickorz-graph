@@ -1,9 +1,9 @@
 type _Schema_
   @fulltext(
     name: "search"
-    language: fr
+    language: en
     algorithm: rank
-    include: [{ entity: "Sticker", fields: [{ name: "hash" }, { name: "tags" }] }]
+    include: [{ entity: "Sticker", fields: [{ name: "tags" }] }]
   )
 
 type Sticker @entity {
